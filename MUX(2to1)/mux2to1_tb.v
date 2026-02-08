@@ -2,6 +2,7 @@
 module mux2to1_tb;
 reg a,b,s;
 wire y;
+integer i; 
 mux2to1 uut(
      .a(a),
      .b(b),
@@ -9,10 +10,9 @@ mux2to1 uut(
      .y(y)
 );
 initial begin 
-  a = 0; b =0; s = 0;
- #100 a = 0; b = 1; s=1;
- #100 a = 1; b = 0; s=0;
- #100 a = 1; b = 1; s=1;
+   for(i = 0; i < 8; i = i + 1) begin
+        {a, b, s} = i;  
+        #100;
+    end
 end
-
 endmodule
