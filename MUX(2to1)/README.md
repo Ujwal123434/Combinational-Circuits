@@ -39,3 +39,4 @@ y =`s?a:b`
 - This is a simple combinational circuit with no memory or clock involved.
 - The select line `s` decides which input (`a` or `b`) appears at the output.
 - It is commonly used for data selection and routing in digital systems.
+
