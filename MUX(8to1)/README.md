@@ -28,8 +28,11 @@ A multiplexer is a combinational circuit that selects one of several input signa
 | 1 | 1 | 1 | h |
 
 ---
-
+## Implementation 
+- Using equations and depending on select lines
+- Using two 4:1 mux  
 
 ## Notes
 - This is a simple combinational circuit with no memory or clock involved.
 - The select lines `s1` `s2` `s3` decides which input  appears at the output.
+
