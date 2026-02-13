@@ -17,17 +17,10 @@ A multiplexer is a combinational circuit that selects one of several input signa
 
 ## Truth Table (Simulation Order)
 
-| A | B | S | Y |
-| - | - | - | - |
-| 0 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 0 |
-| 1 | 0 | 0 | 1 |
-| 1 | 1 | 0 | 1 |
-| 0 | 0 | 1 | 0 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 1 |
-
+| S | Y |
+| - | - | 
+| 0 | a| 
+| 1 | b|
 ---
 
 ## Logic Equation
@@ -39,4 +32,5 @@ y =`s?a:b`
 - This is a simple combinational circuit with no memory or clock involved.
 - The select line `s` decides which input (`a` or `b`) appears at the output.
 - It is commonly used for data selection and routing in digital systems.
+
 
