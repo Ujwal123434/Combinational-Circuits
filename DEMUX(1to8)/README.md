@@ -11,7 +11,7 @@ A demultiplexer is a combinational circuit that takes a single input signal and 
 - en  – enable signal  
 
 ## Outputs
-- y0 – output 0  
+- y0 – output 0   
 - y1 – output 1  
 - y2 – output 2  
 - y3 – output 3  
