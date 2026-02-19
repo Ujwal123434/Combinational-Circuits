@@ -6,59 +6,54 @@ A demultiplexer is a combinational circuit that takes a single input signal and 
 ---
 
 ## Inputs
-- a   – data input  
-- s2, s1, s0 – select lines  
-- en  – enable signal  
+- a  – data input
+- s2 – select line 2
+- s1 – select line 1
+- s0 – select line 0
 
 ## Outputs
-- y0 – output 0   
-- y1 – output 1  
-- y2 – output 2  
-- y3 – output 3  
-- y4 – output 4  
-- y5 – output 5  
-- y6 – output 6  
-- y7 – output 7  
+- y0 – output 0
+- y1 – output 1
+- y2 – output 2
+- y3 – output 3
+- y4 – output 4
+- y5 – output 5
+- y6 – output 6
+- y7 – output 7
 
 ---
 
 ## Truth Table
 
-| en | s2 | s1 | s0 | Active Output |
-|----|----|----|----|---------------|
-| 0  |  x |  x |  x | All outputs = 0 |
-| 1  | 0  | 0  | 0  | y0 = a |
-| 1  | 0  | 0  | 1  | y1 = a |
-| 1  | 0  | 1  | 0  | y2 = a |
-| 1  | 0  | 1  | 1  | y3 = a |
-| 1  | 1  | 0  | 0  | y4 = a |
-| 1  | 1  | 0  | 1  | y5 = a |
-| 1  | 1  | 1  | 0  | y6 = a |
-| 1  | 1  | 1  | 1  | y7 = a |
+| s2 | s1 | s0 | y0 | y1 | y2 | y3 | y4 | y5 | y6 | y7 |
+|----|----|----|----|----|----|----|----|----|----|----|
+| 0  | 0  | 0  | a  | 0  | 0  | 0  | 0  | 0  | 0  | 0  |
+| 0  | 0  | 1  | 0  | a  | 0  | 0  | 0  | 0  | 0  | 0  |
+| 0  | 1  | 0  | 0  | 0  | a  | 0  | 0  | 0  | 0  | 0  |
+| 0  | 1  | 1  | 0  | 0  | 0  | a  | 0  | 0  | 0  | 0  |
+| 1  | 0  | 0  | 0  | 0  | 0  | 0  | a  | 0  | 0  | 0  |
+| 1  | 0  | 1  | 0  | 0  | 0  | 0  | 0  | a  | 0  | 0  |
+| 1  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | a  | 0  |
+| 1  | 1  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | a  |
 
 ---
 
 ## Logic Equations
-
-- y0 = en · a · s2' · s1' · s0'
-- y1 = en · a · s2' · s1' · s0
-- y2 = en · a · s2' · s1 · s0'
-- y3 = en · a · s2' · s1 · s0
-- y4 = en · a · s2 · s1' · s0'
-- y5 = en · a · s2 · s1' · s0
-- y6 = en · a · s2 · s1 · s0'
-- y7 = en · a · s2 · s1 · s0
-
----
-
-## Operation
-- When en = 0, all outputs remain 0.
-- When en = 1, the select lines s2 s1 s0 decide which output receives input a.
-- Only one output is active at a time.
+- `y0 = a · s2' · s1' · s0'`
+- `y1 = a · s2' · s1' · s0`
+- `y2 = a · s2' · s1 · s0'`
+- `y3 = a · s2' · s1 · s0`
+- `y4 = a · s2 · s1' · s0'`
+- `y5 = a · s2 · s1' · s0`
+- `y6 = a · s2 · s1 · s0'`
+- `y7 = a · s2 · s1 · s0`
 
 ---
 
 ## Notes
-- This is a combinational circuit with no clock.
-- Three select lines allow selection of one among eight outputs.
-- Commonly used in data routing, memory addressing, and communication systems.
+- This is a combinational circuit with no clock or memory elements.
+- The select lines s2, s1, and s0 determine which output receives the input signal.
+- Only one output is active at a time.
+- Demultiplexers are commonly used for data routing and signal distribution in digital systems.
+
+
